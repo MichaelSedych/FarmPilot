@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmPilot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">FP</div>
+                <span class="logo-text">FarmPilot</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О проекте</a></li>
+                <li><a href="#team">Команда</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>FarmPilot</h1>
+            <p class="hero-tagline">Сначала симулятор, потом поле</p>
+            <a href="#about" class="cta-button">Узнать больше</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">О проекте</h2>
+            <div class="about-content fade-in">
+                <p>Программно-аппаратный комплекс для обучения операторов сельскохозяйственной техники с реалистичными органами управления и визуализацией в режиме реального времени</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title fade-in">Конструктивные особенности</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="image Physical-cockpit"></div>
+                    <h3>Физический кокпит</h3>
+                    <p>Металлический каркас с посадочным креслом, рулевым колесом, педалями и рычагами управления навесным и тяговым оборудованием. Полностью повторяет реальные органы управления сельскохозяйственной техники.</p>
+                    
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="image Display-system"></div>
+                    <h3>Базовая версия</h3>
+                    <p>Два монитора для визуализации окружающей среды и панели приборов.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="image Display-system-extended"></div>
+                    <h3>Расширенная версия</h3>
+                    <p>AR-очки, позволяющие наложить цифровые объекты на физическую кабину.</p>
+                    
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="image Unity-logo"></div>
+                    <h3>Программное обеспечение</h3>
+                    <p>Разработано на игровом движке Unity. Включает симуляцию управления различными видами сельхозтехники, реалистичные модели взаимодействия с почвой, препятствиями и изменяющимися погодными условиями.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title fade-in">Наша команда</h2>
+            <div class="team-grid">
+                <div class="team-member fade-in">
+                    <div class="member-image placeholder-img"></div>
+                    <div class="member-info">
+                        <h3>Никита Хворостенко</h3>
+                        <p class="member-role">Генеральный директор</p>
+                        <p>Студент Вавиловского университета, победитель студенческого стартапа. Главный разработчик Unity и конструктор кокпита.</p>
+                    </div>
+                </div>
+
+                <div class="team-member fade-in">
+                    <div class="member-image placeholder-img"></div>
+                    <div class="member-info">
+                        <h3>Роман Гончаров</h3>
+                        <p class="member-role">Научный руководитель</p>
+                        <p>Руководитель центра "Агроробототехника и VR/AR", кандидат технических наук.</p>
+                    </div>
+                </div>
+
+                <div class="team-member fade-in">
+                    <div class="member-image placeholder-img"></div>
+                    <div class="member-info">
+                        <h3>Даниил Буряченко</h3>
+                        <p class="member-role">Специалист по 3D моделированию</p>
+                        <p>Студент Вавиловского университета, победитель студенческого стартапа. Разработчик 3D моделей для игрового движка.</p>
+                    </div>
+                </div>
+
+                <div class="team-member fade-in">
+                    <div class="member-image placeholder-img"></div>
+                    <div class="member-info">
+                        <h3>Артём Вахлюев</h3>
+                        <p class="member-role">Unity разработчик</p>
+                        <p>Студент Вавиловского университета. Unity разработчик, специалист по игровой механике.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in" style="color: var(--black-color);">Контакты</h2>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <div class="contact-item">
+                        <strong>Контактное лицо</strong>
+                        Хворостенко Никита Андреевич
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        pacan164@yandex.ru
+                    </div>
+                    <div class="contact-item">
+                        <strong>Телефон</strong>
+                        +7 960 342 07 60
+                    </div>
+                    
+                    <div class="company-details">
+                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;">ООО "Технет Фарм"</h3>
+                        <p>ОГРН: 1256400011405</p>
+                        <p>ИНН: 6449111483</p>
+                        <p>КПП: 644901001</p>
+                        <p>Адрес: 413100, Саратовская область, г. Энгельс, ул. Красноармейская, д. 34</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">FP</div>
+        <p>&copy; 2025 FarmPilot - ООО "ТЕХНЕТ ФАРМ". Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
