@@ -307,10 +307,29 @@ nav {
 }
 
 .member-image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 100%;
     height: 300px;
     object-fit: cover;
     background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.first-member {
+    background-image: url(/images/Nikita.jpg);
+}
+
+.second-member {
+    background-image: url(/images/Roman.jpg);
+}
+
+.third-member {
+    background-image: url(/images/Daniil.jpg);
+}
+
+.fourth-member {
+    background-image: url(/images/Artem.jpg);
 }
 
 .member-info {
@@ -337,44 +356,103 @@ nav {
 
 /* Contact Section */
 .contact {
-    padding: 100px 2rem;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--light-bg) 100%);
+    padding: 0;
+    background: var(--light-bg);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+}
+
+.contact-left {
+    background: #ffffff;
+    color: var(--text-dark);
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     color: var(--text-dark);
 }
 
-.contact-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.contact-info {
-    background: rgba(255,255,255,0.1);
-    padding: 3rem;
-    border-radius: 15px;
-    margin-top: 2rem;
-    backdrop-filter: blur(10px);
-}
-
-.contact-item {
-    margin: 1.5rem 0;
-    font-size: 1.1rem;
-}
-
-.contact-item strong {
-    color: var(--black-color);
-    display: block;
+.contact-person h3,
+.contact-group h3,
+.company-info h3 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
-.company-details {
-    margin-top: 2rem;
+.contact-person p,
+.contact-group p,
+.company-info p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0.3rem 0;
+    color: var(--text-dark);
+}
+
+.company-info {
+    margin-top: 1rem;
     padding-top: 2rem;
-    border-top: 2px solid rgba(255,255,255,0.2);
+    border-top: 2px solid #e0e0e0;
 }
 
-.company-details p {
-    margin: 0.5rem 0;
+.contact-right {
+    position: relative;
+    overflow: hidden;
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive для контактов */
+@media (max-width: 968px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-left {
+        padding: 3rem 2rem;
+    }
+    
+    .map-container {
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2rem;
+    }
+    
+    .contact-person h3,
+    .contact-group h3,
+    .company-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .contact-person p,
+    .contact-group p,
+    .company-info p {
+        font-size: 0.95rem;
+    }
 }
 
 /* Footer */

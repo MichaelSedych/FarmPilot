@@ -87,7 +87,7 @@
             <h2 class="section-title fade-in">Наша команда</h2>
             <div class="team-grid">
                 <div class="team-member fade-in">
-                    <div class="member-image placeholder-img"></div>
+                    <div class="image first-member"></div>
                     <div class="member-info">
                         <h3>Никита Хворостенко</h3>
                         <p class="member-role">Генеральный директор</p>
@@ -96,7 +96,7 @@
                 </div>
 
                 <div class="team-member fade-in">
-                    <div class="member-image placeholder-img"></div>
+                    <div class="image second-member"></div>
                     <div class="member-info">
                         <h3>Роман Гончаров</h3>
                         <p class="member-role">Научный руководитель</p>
@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="team-member fade-in">
-                    <div class="member-image placeholder-img"></div>
+                    <div class="image third-member"></div>
                     <div class="member-info">
                         <h3>Даниил Буряченко</h3>
                         <p class="member-role">Специалист по 3D моделированию</p>
@@ -114,7 +114,7 @@
                 </div>
 
                 <div class="team-member fade-in">
-                    <div class="member-image placeholder-img"></div>
+                    <div class="image fourth-member"></div>
                     <div class="member-info">
                         <h3>Артём Вахлюев</h3>
                         <p class="member-role">Unity разработчик</p>
@@ -125,36 +125,51 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title fade-in" style="color: var(--black-color);">Контакты</h2>
-            <div class="contact-content">
-                <div class="contact-info fade-in">
-                    <div class="contact-item">
-                        <strong>Контактное лицо</strong>
-                        Хворостенко Никита Андреевич
-                    </div>
-                    <div class="contact-item">
-                        <strong>Email</strong>
-                        pacan164@yandex.ru
-                    </div>
-                    <div class="contact-item">
-                        <strong>Телефон</strong>
-                        +7 960 342 07 60
-                    </div>
-                    
-                    <div class="company-details">
-                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;">ООО "Технет Фарм"</h3>
-                        <p>ОГРН: 1256400011405</p>
-                        <p>ИНН: 6449111483</p>
-                        <p>КПП: 644901001</p>
-                        <p>Адрес: 413100, Саратовская область, г. Энгельс, ул. Красноармейская, д. 34</p>
-                    </div>
-                </div>
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="contact-wrapper">
+        <div class="contact-left">
+            <h2 class="contact-title">Контакты</h2>
+            
+            <div class="contact-person">
+                <h3>Контактное лицо</h3>
+                <p>Хворостенко Никита Андреевич</p>
+            </div>
+            
+            <div class="contact-group">
+                <h3>Email</h3>
+                <p>pacan164@yandex.ru</p>
+            </div>
+            
+            <div class="contact-group">
+                <h3>Телефон</h3>
+                <p>+7 960 342 07 60</p>
+            </div>
+            
+            <div class="company-info">
+                <h3>ООО "Технет Фарм"</h3>
+                <p>ОГРН: 1256400011405</p>
+                <p>ИНН: 6449111483</p>
+                <p>КПП: 644901001</p>
+                <p>Адрес: 413100, Саратовская область, г. Энгельс, ул. Красноармейская, д. 34</p>
             </div>
         </div>
-    </section>
+        
+        <div class="contact-right">
+            <div id="map" class="map-container">
+                <iframe 
+                    src="https://yandex.ru/map-widget/v1/?ll=46.123333%2C51.483333&z=16&l=map&pt=46.123333,51.483333,pm2rdm" 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0"
+                    allowfullscreen="true"
+                    style="position:relative;">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer>
