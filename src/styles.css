@@ -170,7 +170,7 @@ nav {
 }
 
 .container {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -210,75 +210,63 @@ nav {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
     margin-top: 3rem;
 }
 
 .feature-card {
-    background: var(--light-bg);
-    padding: 2.5rem;
+    background: var(--text-light);
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
     overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
-.feature-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    font-size: 2rem;
+.feature-card .image {
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.Physical-cockpit {
+    background-image: url("/images/Physical-cockpit.jpg");
+}
+
+.Display-system {
+    background-image: url("/images/Display-system.jpg");
+}
+
+.Display-system-extended {
+    background-image: url("/images/Extended-version.jpg");
+}
+
+.Unity-logo {
+    background-image: url("/images/Unity.jpg");
 }
 
 .feature-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: var(--black-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    padding: 0 2rem;
+    padding-top: 2rem;
     text-align: center;
 }
 
 .feature-card p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-}
-
-.image {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-top: 1.5rem;
-}
-
-.Physical-cockpit {
-  background-image: url("/images/Physical-cockpit.jpg");
-}
-
-.Display-system {
-  background-image: url("/images/Display-system.jpg");
-}
-
-.Display-system-extended {
-  background-image: url("/images/Extended-version.jpg");
-}
-
-.Unity-logo {
-  background-image: url("/images/Unity.jpg");
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
 }
 
 /* Team Section */
@@ -289,13 +277,13 @@ nav {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
     margin-top: 3rem;
 }
 
 .team-member {
-    background: var(--light-bg);
+    background: var(--text-light);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -306,14 +294,13 @@ nav {
     transform: translateY(-10px);
 }
 
-.member-image {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+.team-member .image {
     width: 100%;
-    height: 300px;
+    aspect-ratio: 1 / 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     object-fit: cover;
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
 }
 
 .first-member {
@@ -340,120 +327,124 @@ nav {
 .member-info h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: var(--black-color);
+    color: var(--text-dark);
 }
 
 .member-role {
     font-weight: bold;
-    color: var(--text-dark);
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 .member-info p {
     font-size: 1rem;
     line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .features-grid,
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Contact Section */
 .contact {
-    padding: 0;
-    background: var(--light-bg);
+    padding: 100px 2rem;
+    background: var(--accent-color);
 }
 
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 600px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: stretch;
 }
 
-.contact-left {
-    background: #ffffff;
-    color: var(--text-dark);
-    padding: 4rem 3rem;
+.contact-left, .contact-right {
+    background: var(--light-bg);
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
 }
 
+.contact-left {
+   border-radius: 15px 0 0 15px;
+}
+
+.contact-right {
+   border-radius: 0 15px 15px 0;
+}
+
+
 .contact-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
     color: var(--text-dark);
+    margin-bottom: 1.5rem;
 }
 
 .contact-person h3,
 .contact-group h3,
 .company-info h3 {
-    font-size: 1.2rem;
-    color: var(--text-dark);
+    font-size: 1.15rem;
+    color: var(--black-color);
     margin-bottom: 0.5rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .contact-person p,
 .contact-group p,
 .company-info p {
-    font-size: 1.05rem;
+    font-size: 1rem;
     line-height: 1.6;
     margin: 0.3rem 0;
     color: var(--text-dark);
 }
 
 .company-info {
-    margin-top: 1rem;
-    padding-top: 2rem;
-    border-top: 2px solid #e0e0e0;
-}
-
-.contact-right {
-    position: relative;
-    overflow: hidden;
+    margin-top: 0.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
 }
 
 .map-container {
     width: 100%;
-    height: 100%;
-    min-height: 600px;
+    height: 370px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .map-container iframe {
     width: 100%;
     height: 100%;
+    border: none;
 }
 
-/* Responsive для контактов */
-@media (max-width: 968px) {
+@media (max-width: 1000px) {
     .contact-wrapper {
         grid-template-columns: 1fr;
     }
-    
-    .contact-left {
-        padding: 3rem 2rem;
+    .contact-left, .contact-right {
+        margin-bottom: 2rem;
+        padding: 2rem 1rem;
     }
-    
     .map-container {
-        min-height: 450px;
+        height: 300px;
     }
 }
 
-@media (max-width: 768px) {
-    .contact-title {
-        font-size: 2rem;
-    }
-    
-    .contact-person h3,
-    .contact-group h3,
-    .company-info h3 {
-        font-size: 1.1rem;
-    }
-    
-    .contact-person p,
-    .contact-group p,
-    .company-info p {
-        font-size: 0.95rem;
-    }
-}
 
 /* Footer */
 footer {
