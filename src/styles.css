@@ -387,18 +387,18 @@ nav {
     gap: 1.5rem;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    /* box-shadow: 0 4px 16px rgba(0,0,0,0.06); */
     padding: 1.5rem 2rem;
     transition: box-shadow 0.2s;
 }
 
-.partner-item:hover {
+/* .partner-item:hover {
     box-shadow: 0 8px 32px rgba(0,0,0,0.11);
-}
+} */
 
 .partner-icon {
-    width: 56px;
-    height: 56px;
+    width: 156px;
+    height: 156px;
     object-fit: contain;
     display: block;
 }
