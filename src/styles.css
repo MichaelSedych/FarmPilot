@@ -41,23 +41,21 @@ nav {
     margin: 0 auto;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
 .logo-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--accent-color);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: var(--text-dark);
+    background: var(--accent-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+}
+
+.logo-svg {
+    width: 80px;
+    height: 80px;
+    display: block;
 }
 
 .logo-text {
@@ -160,7 +158,7 @@ nav {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(255, 165, 0, 0.4);
+    box-shadow: 0 10px 30px rgba(177, 177, 177, 0.4);
 }
 
 /* About Section */
@@ -190,7 +188,7 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     width: 100px;
-    height: 4px;
+    height: 2px;
     background: var(--text-dark);
 }
 
@@ -225,6 +223,10 @@ nav {
 
 .feature-card:hover {
     transform: translateY(-10px);
+}
+
+.feature-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.11);
 }
 
 .feature-card .image {
@@ -294,6 +296,10 @@ nav {
     transform: translateY(-10px);
 }
 
+.team-member:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.11);
+}
+
 .team-member .image {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -357,10 +363,76 @@ nav {
     }
 }
 
+/* Партнеры */
+.partners {
+    padding: 100px 2rem;
+    background: var(--accent-color);
+}
+
+.partners .container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.partners-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.partner-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    padding: 1.5rem 2rem;
+    transition: box-shadow 0.2s;
+}
+
+.partner-item:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.11);
+}
+
+.partner-icon {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
+}
+
+.partner-text {
+    font-size: 1.12rem;
+    color: var(--text-dark);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Адаптивность */
+@media (max-width: 640px) {
+    .partner-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        text-align: left;
+        padding: 1.5rem 1rem;
+    }
+    .partner-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .partner-text {
+        font-size: 1rem;
+    }
+}
+
+
 /* Contact Section */
 .contact {
     padding: 100px 2rem;
-    background: var(--accent-color);
+    background: var(--light-bg);
 }
 
 .contact-wrapper {
@@ -445,7 +517,6 @@ nav {
     }
 }
 
-
 /* Footer */
 footer {
     background: var(--dark-bg);
@@ -454,17 +525,19 @@ footer {
     padding: 2rem;
 }
 
-.footer-logo {
-    width: 60px;
-    height: 60px;
+.footer-logo-svg {
+    width: 80px;
+    height: 80px;
+    display: block;
     margin: 0 auto 1rem;
-    background: var(--accent-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.5rem;
+    /* фильтр чтобы стать белым если внутри SVG цвет не белый */
+    filter: brightness(0) invert(1);
+}
+
+/* текст футера */
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
 }
 
 /* Animations */

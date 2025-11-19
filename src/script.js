@@ -78,23 +78,23 @@ window.addEventListener('scroll', () => {
 });
 
 // Add hover effect to feature cards
-document.querySelectorAll('.feature-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(-10px) scale(1)';
-    });
-});
+// document.querySelectorAll('.feature-card').forEach(card => {
+//     card.addEventListener('mouseenter', function() {
+//         this.style.transform = 'translateY(-10px) scale(1.02)';
+//     });
+//     card.addEventListener('mouseleave', function() {
+//         this.style.transform = 'translateY(-10px) scale(1)';
+//     });
+// });
 
-document.querySelectorAll('.team-member').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(-10px) scale(1)';
-    });
-});
+// document.querySelectorAll('.team-member').forEach(card => {
+//     card.addEventListener('mouseenter', function() {
+//         this.style.transform = 'translateY(-10px) scale(1.02)';
+//     });
+//     card.addEventListener('mouseleave', function() {
+//         this.style.transform = 'translateY(-10px) scale(1)';
+//     });
+// });
 
 // Console welcome message
 console.log('%cFarmPilot', 'color: #000000ff; font-size: 24px; font-weight: bold;');
